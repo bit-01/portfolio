@@ -1,0 +1,845 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background-color: #262626;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: rwo;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 7px;
+}
+
+.iBox {
+    position: relative;
+    margin: 30px 10px;
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .iBox {
+        width: 30%;
+    }
+}
+
+h1 {
+    color: #e1e1e1;
+}
+
+/* Input Text 1 */
+
+.i1 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: #414141;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    
+} 
+
+.i1 label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255,255,255,.25);
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.i1 input:valid ~ label, .i1 input:focus ~ label {
+    color: #414141;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    letter-spacing: 0.2em;
+    background-color: #eee;
+}
+.i1 input:valid, .i1 input:focus {
+    border-color: #eee;
+}
+
+/* ** Input Text 1 ** */
+
+/* Input Text 11 */
+.i11 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: #414141;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;    
+} 
+
+.i11 label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255,255,255,.25);
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.i11 input:valid ~ label, .i11 input:focus ~ label {
+    color: #414141;
+    transform: translateX(10px) translateY(33px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    letter-spacing: 0.2em;
+    background-color: #eee;
+}
+.i11 input:valid, .i11 input:focus {
+    border-color: #eee;
+}
+
+/* ** Input Text 11 ** */
+
+/* Input Text 111 */
+.i111 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: #414141;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;    
+} 
+
+.i111 label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255,255,255,.25);
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.i111 input:valid ~ label, .i111 input:focus ~ label {
+    color: #414141;
+    transform: translateX(10px) translateY(120%);
+    font-size: 0.65em;
+    padding: 0 10px;
+    letter-spacing: 0.2em;
+    background-color: #eee;
+}
+.i111 input:valid, .i111 input:focus {
+    border-color: #eee;
+    text-indent: 6.5em;
+}
+
+/* ** Input Text 111 ** */
+
+
+/* Input Text 2 */
+.i2 label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: rgba(255,255,255,.25);
+    font-size: 1em;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+.i2 input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px rgba(255,255,255,.25);
+	background-color: transparent;
+	outline: none;
+	font-size: 1em;
+	color: #fff;
+	transition: all .3s;
+} 
+.i2 input:focus ~ label, .i2 input:valid ~ label {
+    color: #eee;
+  	bottom: 80%;
+  	left: -10px;
+    letter-spacing: 0.2em;
+}
+.i2 input ~ .border {
+	position:absolute;
+	bottom:0;
+	left:50%;
+	width:0;
+	height:2px;
+	background-color:#eee;
+	transition:.6s;
+	
+}
+.i2 input:focus~.border, .i2 input:valid~.border {
+	width: 100%;
+	left:0;
+}
+
+/* ** Input Text 2 ** */
+
+/* Input Text 2 */
+.i2 label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: rgba(255,255,255,.25);
+    font-size: 1em;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+.i2 input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px rgba(255,255,255,.25);
+	background-color: transparent;
+	outline: none;
+	font-size: 1em;
+	color: #fff;
+	transition: all .3s;
+} 
+.i2 input:focus ~ label, .i2 input:valid ~ label {
+    color: #eee;
+  	bottom: 80%;
+  	left: -10px;
+    letter-spacing: 0.2em;
+}
+.i2 input ~ .border {
+	position:absolute;
+	bottom:0;
+	left:50%;
+	width:0;
+	height:2px;
+	background-color:#eee;
+	transition:.6s;
+	
+}
+.i2 input:focus~.border, .i2 input:valid~.border {
+	width: 100%;
+	left:0;
+}
+
+/* ** Input Text 2 ** */
+
+/* Input Text 22 */
+.i22 label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: rgba(255,255,255,.25);
+    font-size: 1em;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+.i22 input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px rgba(255,255,255,.25);
+	background-color: transparent;
+	outline: none;
+	font-size: 1em;
+	color: #fff;
+	transition: all .3s;
+} 
+.i22 input:focus ~ label, .i22 input:valid ~ label {
+    color: #eee;
+  	bottom: 80%;
+  	left: -10px;
+    letter-spacing: 0.2em;
+}
+.i22 input ~ .border {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:0;
+	height:2px;
+	background-color:#eee;
+	transition:.6s;
+	
+}
+.i22 input:focus~.border, .i22 input:valid~.border {
+	width: 100%;
+	left:0;
+}
+/* ** Input Text 22 ** */
+
+/* Input Text 222 */
+.i222 label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: rgba(255,255,255,.25);
+    font-size: 1em;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+.i222 input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px rgba(255,255,255,.25);
+	background-color: transparent;
+	outline: none;
+	font-size: 1em;
+	color: #fff;
+	transition: all .3s ease;
+    transition-delay: .6s;
+} 
+.i222 input:focus ~ label, .i222 input:valid ~ label {
+    color: #eee;
+  	bottom: 80%;
+  	left: -10px;
+    letter-spacing: 0.2em;
+}
+.i222 input ~ .border {
+	position:absolute;
+	top:0;
+	left:50%;
+	width:0;
+	height:2px;
+	background-color:#eee;
+	transition:.6s;
+	
+}
+.i222 input:focus~.border, .i222 input:valid~.border {
+	width: 100%;
+	left:0;
+}
+.i222 input:focus  {
+    border: #eee solid 2px;
+}
+
+/* ** Input Text 222 ** */
+
+/* Input Text 3 */
+.i3 input {
+	font-size: 1em;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  color: #eee;
+  background:transparent;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 95px;
+  transition: all .5s ease-in-out;
+ }
+  .i3 input::-webkit-input-placeholder {
+    color: #414141;
+    text-indent: 95px;
+    font-weight: 300;
+    transition: all .5s ease-in-out;;
+}
+
+.i3 label {
+	font-size:1em;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: #eee;
+    color: #414141;
+    transition: all .4s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transform-origin: left bottom;
+    z-index: 99;
+}
+.i3 label:before, .i3 label:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+      background: #eee;
+      transform-origin: left bottom;
+      transition: all .4s ease-in-out;
+      pointer-events: none;
+      z-index: -1;
+ }
+.i3 label:before {
+    background: rgba(0,0,0,.2);
+    z-index: -2;
+    right: 20%;
+}
+.i3 input:focus, .i3 input:active {
+    color: #eee;
+    text-indent: 5px;
+    background: #414141;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}  
+.i3 input:focus::-webkit-input-placeholder, .i3 input:active::-webkit-input-placeholder {
+    color: #aaa;
+    text-indent:0;
+}
+.i3 input:focus + label, .i3 input:active + label {
+    transform: rotate(-66deg);
+    border-radius: 3px;
+}
+.i3 input:focus + label::before, .i3 input:active + label::before {
+    transform: rotate(10deg);
+}
+/* ** Input Tect 3 ** */
+
+/* Input Text 33 */
+.i33 input {
+	font-size: 1em;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  color: #eee;
+  background:transparent;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 95px;
+  transition: all .5s ease-in-out;
+ }
+  .i33 input::-webkit-input-placeholder {
+    color: #414141;
+    text-indent: 95px;
+    font-weight: 300;
+    transition: all .5s ease-in-out;;
+}
+
+.i33 label {
+	font-size:1em;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: #eee;
+    color: #414141;
+    transition: all .4s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transform-origin: left top;
+    z-index: 99;
+}
+.i33 label:before, .i33 label:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+      background: #eee;
+      transform-origin: left top;
+      transition: all .4s ease-in-out;
+      pointer-events: none;
+      z-index: -1;
+ }
+.i33 label:before {
+    background: rgba(0,0,0,.2);
+    z-index: -2;
+    right: 20%;
+}
+.i33 input:focus, .i33 input:active {
+    color: #eee;
+    text-indent: 0;
+    background: #414141;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}  
+.i33 input:focus::-webkit-input-placeholder, .i33 input:active::-webkit-input-placeholder {
+    color: #aaa;
+    text-indent:0;
+}
+.i33 input:focus + label, .i33 input:active + label {
+    transform: rotate(66deg);
+    border-radius: 3px;
+}
+.i33 input:focus + label::before, .i33 input:active + label::before {
+    transform: rotate(-10deg);
+}
+/* ** Input Text 33 ** */
+
+/* Input Text 333 */
+.i333 input {
+	font-size: 1em;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  color: #eee;
+  background:transparent;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 95px;
+  transition: all .5s ease-in-out;
+ }
+  .i333 input::-webkit-input-placeholder {
+    color: #414141;
+    text-indent: 95px;
+    font-weight: 300;
+    transition: all .5s ease-in-out;;
+}
+
+.i333 label {
+	font-size:1em;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: #eee;
+    color: #414141;
+    transition: all .4s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transform-origin: left top;
+    z-index: 99;
+}
+
+.i333 input:focus, .i333 input:active {
+    color: #eee;
+    text-indent: 0;
+    background: #414141;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}  
+.i333 input:focus::-webkit-input-placeholder, .i333 input:active::-webkit-input-placeholder {
+    color: #aaa;
+    text-indent:0;
+}
+.i333 input:focus + label, .i333 input:active + label {
+    transform: rotate3d(360,0,0, 180deg);
+    border-radius: 3px;
+}
+/* ** Input Text 333 ** */
+
+
+/* Input Text 4 */
+.i4 input {
+	font-size:1em;
+	padding:10px;
+	display:inline-block;
+    border: none;
+    outline: none;
+    text-indent: 95px;
+    background: transparent;
+    color: #414141;
+    transition: all .5s ease;
+    transition-delay:.6s;
+    width: 100%;
+}
+.i4 label {
+	font-size:1em;
+    display: inline-block;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:10px;
+    background-color: #414141;
+    color:#eee;
+    transition: all .5s ease;
+    transition-delay:.6s;
+
+}
+.i4 input~.i4border:before,
+.i4 input~.i4border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background-color: #eee;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.i4 input~.i4border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+
+.i4 input~.i4border i:before,
+.i4 input~.i4border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #eee;
+	transition: 0.2s;
+}
+
+.i4 input~.i4border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+.i4 input:focus, .i4 input:valid {
+    background-color: #414141;
+    color:#eee;
+}
+.i4 input:focus + label, .i4 input:valid + label {
+    background-color: #eee;
+    color: #414141;
+}
+.i4 input:focus ~ .i4border:before,
+.i4 input:focus~.i4border:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+
+.i4 input:focus~.i4border:after {
+	transition-delay: 0.2s;
+}
+
+.i4 input:focus~.i4border i:before,
+.i4 input:focus~.i4border i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+.i4 input:focus~.i4border i:after {
+	transition-delay: 0.4s;
+}
+
+/* ** Input Text 4 ** */
+
+/* Input Text 44 */
+.i44 input {
+	font-size:1em;
+	padding:10px;
+	display:inline-block;
+    border: none;
+    outline: none;
+    text-indent: 95px;
+    background: transparent;
+    color: #414141;
+    transition: all .5s ease;
+    transition-delay:.6s;
+    width: 100%;
+}
+.i44 label {
+	font-size:1em;
+    display: inline-block;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:10px;
+    background-color: #414141;
+    color:#eee;
+    transition: all .5s ease;
+    transition-delay:.6s;
+
+}
+.i44 input~.i44border:before,
+.i44 input~.i44border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background-color: #eee;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.i44 input~.i44border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+
+.i44 input~.i44border i:before,
+.i44 input~.i44border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #eee;
+	transition: 0.2s;
+}
+
+.i44 input~.i44border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+.i44 input:focus, .i44 input:valid {
+    background-color: #414141;
+    color:#eee;
+}
+.i44 input:focus ~ label, .i44 input:valid ~ label {
+    background-color: #eee;
+    color: #414141;
+}
+.i44 input:focus ~ .i44border:before,
+.i44 input:focus~.i44border:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+
+.i44 input:focus~.i44border:after {
+	transition-delay: 0.2s;
+}
+
+.i44 input:focus~.i44border i:before,
+.i44 input:focus~.i44border i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+.i44 input:focus~.i44border i:after {
+	transition-delay: 0.4s;
+}
+
+/* ** Input Text 44 ** */
+
+/* Input Text 444 */
+.i444 input {
+	font-size:1em;
+	padding:10px;
+	display:inline-block;
+    border: none;
+    outline: none;
+    text-indent: 95px;
+    background: transparent;
+    color: #414141;
+    transition: all .5s ease;
+    transition-delay:.6s;
+    width: 100%;
+}
+.i444 label {
+	font-size:1em;
+    display: inline-block;
+    padding:10px;
+    background-color: #414141;
+    color:#eee;
+    transition: all .5s ease;
+    transition-delay:.6s;
+
+}
+.i444 input ~ div {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.i444 input~div .i444border:before,
+.i444 input~div .i444border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background-color: #eee;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.i444 input~div .i444border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+
+.i444 input~div .i444border i:before,
+.i444 input~div .i444border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #eee;
+	transition: 0.2s;
+}
+
+.i444 input~div .i444border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+.i444 input:focus, .i444 input:valid {
+    background-color: #414141;
+    color:#eee;
+}
+.i444 input:focus ~div  label, .i444 input:valid ~ div label {
+    background-color: #eee;
+    color: #414141;
+}
+.i444 input:focus ~ div .i444border:before,
+.i444 input:focus~div .i444border:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+
+.i444 input:focus~div .i444border:after {
+	transition-delay: 0.2s;
+}
+
+.i444 input:focus~div .i444border i:before,
+.i444 input:focus~div .i444border i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+.i444 input:focus~div .i444border i:after {
+	transition-delay: 0.4s;
+}
+
+/* ** Input Text 444 ** */
