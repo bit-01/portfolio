@@ -1,6 +1,6 @@
 <script setup>
 import MainSlide from '@/components/MainSlide.vue'
-import MainSpaceSlide from '@/components/MainSpaceSlide.vue'
+import MainParticlesSlide from '@/components/MainParticlesSlide.vue'
 import { settingsStore } from '@/stores/settings'
 import { computed, onMounted } from 'vue'
 
@@ -15,9 +15,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <MainSlide :homepage="homepage">
+  <MainSlide :homepage="homepage" :blur="true" :shadow="true">
     <template #background>
-      <MainSpaceSlide />
+      <MainParticlesSlide />
     </template>
   </MainSlide>
 </template>

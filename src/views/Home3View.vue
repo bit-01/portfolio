@@ -1,6 +1,6 @@
 <script setup>
+import MainPolygonizrSlide from '@/components/MainPolygonizrSlide.vue'
 import MainSlide from '@/components/MainSlide.vue'
-import MainSpaceSlide from '@/components/MainSpaceSlide.vue'
 import { settingsStore } from '@/stores/settings'
 import { computed, onMounted } from 'vue'
 
@@ -15,9 +15,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <MainSlide :homepage="homepage">
+  <MainSlide :homepage="homepage" fullscreen blur>
     <template #background>
-      <MainSpaceSlide />
+      <MainPolygonizrSlide />
     </template>
   </MainSlide>
 </template>
