@@ -4,6 +4,7 @@
 
 html {
     cursor: auto;
+    scroll-behavior: smooth;
 }
 a:hover {
     cursor: pointer;
@@ -20,6 +21,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 .poppins-thin {
@@ -139,4 +141,30 @@ h6 {
     color: var(--color-headings);
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.nav-item {
+    --b: 0.125em; /* the thickness of the line */
+    --c: var(--bit-purple); /* the color */
+    padding: 0.25em calc(var(--b) * 1.5);
+    /* padding-block: var(--b); */
+    background:
+        linear-gradient(var(--c) 50%, var(--bit-white) 0) 0% calc(100% - var(--_p, 0%)) / 100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition:
+        0.3s var(--_s, 0s) linear,
+        background-size 0.3s calc(0.3s - var(--_s, 0s)),
+        border 0.3s var(--_s, 0s);
+}
+
+.nav-item:hover {
+    --_p: 100%;
+    --_s: 0.3s;
+    color: var(--bit-purple);
+}
+
+.nav-item.active {
+    border-bottom: 2px solid var(--bit-purple);
 }

@@ -34,12 +34,12 @@ defineProps({
           {{ $props.homepage?.main_section?.title.value }}
         </h2> -->
         <p
-          class="text-xl capitalize text-[var(--bit-gray)] w-full tracking-[.3em] border-y border-y-[var(--bit-purple)] border-solid"
+          class="text-xl capitalize text-[var(--bit-gray)] w-full tracking-[.3em] border-y-2 border-y-[var(--bit-purple)] border-solid"
           id="services"
         ></p>
       </div>
     </div>
-    <a href="" class="scrollDown absolute bottom-10">
+    <a href="#about_me" class="scrollDown absolute bottom-10">
       <span></span>
     </a>
   </main>

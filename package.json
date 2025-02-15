@@ -4,13 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.4.47",
     "@tailwindcss/vite": "^4.0.6",
     "axios": "^1.7.9",
     "pinia": "^2.3.1",

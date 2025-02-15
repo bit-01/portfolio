@@ -3,6 +3,7 @@
   --bit-white: #fff;
   --bit-purple: #5c5cff;
   --bit-gray: #d1d5db;
+  --bit-dark-gray: #5c5c5c;
   --bit-cursor-small: "./cursor-1-1.png";
   --bit-cursor-biger: "./cursor-5-5.png";
   --bit-main-shadow: 0px 0px 0.2rem 0px var(--bit-gray);
