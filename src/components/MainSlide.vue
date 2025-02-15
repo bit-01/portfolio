@@ -34,7 +34,7 @@ defineProps({
           {{ $props.homepage?.main_section?.title.value }}
         </h2> -->
         <p
-          class="text-xl capitalize text-[var(--bit-white)] tracking-[.3em] bg-[var(--bit-purple)]"
+          class="text-xl capitalize text-[var(--bit-gray)] w-full tracking-[.3em] border-y border-y-[var(--bit-purple)] border-solid"
           id="services"
         ></p>
       </div>
