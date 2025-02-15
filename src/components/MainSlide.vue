@@ -46,10 +46,10 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/typed.scss';
+@use '@/assets/typed.scss';
 
 #services {
-  @include typed(
+  @include typed.typed(
     'front-end developer',
     'back-end developer',
     'systems administrator',
