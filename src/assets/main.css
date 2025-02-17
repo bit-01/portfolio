@@ -22,6 +22,18 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    letter-spacing: 10%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    max-width: 1366px;
+    width: 100%;
 }
 
 .poppins-thin {
@@ -167,4 +179,9 @@ h6 {
 
 .nav-item.active {
     border-bottom: 2px solid var(--bit-purple);
+}
+section:not(:first-of-type) > h2::before {
+    content: "#";
+    margin-inline-end: 1rem;
+    color: var(--color-stone-500);
 }

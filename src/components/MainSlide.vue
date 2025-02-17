@@ -9,6 +9,13 @@ defineProps({
   fullscreen: Boolean,
   shadow: Boolean,
 })
+
+const gotoAbout = () => {
+  const target = document.querySelector("a[href='#about_me']")
+  window.scrollTo({
+    top: target.offsetTop,
+  })
+}
 </script>
 
 <template>
@@ -39,7 +46,7 @@ defineProps({
         ></p>
       </div>
     </div>
-    <a href="#about_me" class="scrollDown absolute bottom-10">
+    <a href="#about_me" @click.prevent="gotoAbout" class="scrollDown absolute bottom-10">
       <span></span>
     </a>
   </main>

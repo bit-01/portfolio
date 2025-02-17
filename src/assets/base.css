@@ -7,6 +7,7 @@
   --bit-cursor-small: "./cursor-1-1.png";
   --bit-cursor-biger: "./cursor-5-5.png";
   --bit-main-shadow: 0px 0px 0.2rem 0px var(--bit-gray);
+  --bit-divide-skill: linear-gradient(transparent 20%, var(--bit-purple) 50%, transparent 80%) 1 100%;
 }
 
 /* semantic color variables for this project */

@@ -52,7 +52,7 @@ watch(scrollY, (nval) => {
             exactActiveClass="active"
             :to="{ name: 'home' }"
           >
-            Home 1
+            Home
           </RouterLink>
           <RouterLink
             class="w-full nav-item"
