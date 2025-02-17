@@ -35,7 +35,7 @@ const gotoAbout = () => {
           v-if="$props.homepage?.main_section?.logo"
           :src="$props.homepage?.main_section?.logo.value"
           :alt="$props.homepage?.main_section?.title.value ?? 'Main Logo'"
-          class="w-full md:w-[450px]"
+          class="w-full md:w-[300px]"
         />
         <!-- <h2 v-if="$props.homepage?.main_section?.title" class="text-6xl">
           {{ $props.homepage?.main_section?.title.value }}
@@ -46,7 +46,7 @@ const gotoAbout = () => {
         ></p>
       </div>
     </div>
-    <a href="#about_me" @click.prevent="gotoAbout" class="scrollDown absolute bottom-10">
+    <a href="#about_me" @click.prevent="gotoAbout" class="scrollDown absolute bottom-10 scale-[.6]">
       <span></span>
     </a>
   </main>

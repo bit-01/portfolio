@@ -1,6 +1,6 @@
 <script setup>
+import MainParticlesSlide from '@/components/MainParticlesSlide.vue'
 import MainSlide from '@/components/MainSlide.vue'
-import MainSpaceSlide from '@/components/MainSpaceSlide.vue'
 import PageSection from '@/components/PageSection.vue'
 import { settingsStore } from '@/stores/settings'
 import { computed, onMounted } from 'vue'
@@ -20,7 +20,7 @@ onMounted(() => {
 <template>
   <MainSlide :homepage="homepage">
     <template #background>
-      <MainSpaceSlide />
+      <MainParticlesSlide />
     </template>
   </MainSlide>
 
@@ -45,7 +45,7 @@ onMounted(() => {
 
   <PageSection
     title="skills"
-    content-class="mt-6 grid-cols-1 sm:grid grid-cols-3 gap-2 "
+    content-class="mt-6 grid grid-cols-1 sm:grid-cols-3 justify-between gap-y-15 "
     div-id="skills"
   >
     <template #content>
@@ -53,7 +53,9 @@ onMounted(() => {
         v-for="(cat, i) in cats"
         :key="i"
         class="flex flex-col gap-3 justify-start items-center"
-        :class="{ 'border-l border-r [border-image:var(--bit-divide-skill)]': i % 2 !== 0 }"
+        :class="{
+          'sm:border-l sm:border-r [border-image:var(--bit-divide-skill)]': i % 2 !== 0,
+        }"
       >
         <object type="image/svg+xml" class="w-fit" :data="cat.icon_full_path"></object>
         <h3 class="!text-(--bit-gray)">{{ cat.short_name }}</h3>
@@ -70,6 +72,8 @@ onMounted(() => {
       </div>
     </template>
   </PageSection>
+
+  <PageSection title="projects"> </PageSection>
 </template>
 
 <style lang="scss" scoped></style>

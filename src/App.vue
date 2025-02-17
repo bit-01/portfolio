@@ -32,13 +32,14 @@ watch(scrollY, (nval) => {
     }"
   >
     <h1
-      class="text-[var(--bit-purple)] uppercase"
+      class="text-[var(--bit-purple)] uppercase transition-all"
       :class="{
-        'text-xl': scroll,
-        'text-[0px]': !scroll,
+        'w-15': scroll,
+        'w-[0]': !scroll,
       }"
     >
-      bassel aflak
+      <img src="/src/assets/logo.svg" class="w-full" />
+      <span class="sr-only">Bit</span>
     </h1>
     <SideBar title="Navigation" v-model="sideBar">
       <template #trigger>

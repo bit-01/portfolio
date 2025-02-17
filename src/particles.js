@@ -4,7 +4,7 @@ export default {
       value: 200,
       density: {
         enable: true,
-        value_area: 4000,
+        value_area: 7000,
       },
     },
     color: {
@@ -21,8 +21,8 @@ export default {
       },
       image: {
         src: 'img/github.svg',
-        width: 100,
-        height: 100,
+        width: 10,
+        height: 10,
       },
     },
     opacity: {
@@ -36,7 +36,7 @@ export default {
       },
     },
     size: {
-      value: 50,
+      value: 15,
       random: true,
       anim: {
         enable: false,
