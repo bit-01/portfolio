@@ -1,0 +1,90 @@
+<script setup>
+import { useLoaderStore } from '@/stores/loader'
+import { computed } from 'vue'
+
+const loaderStore = useLoaderStore()
+
+const loader = computed(() => loaderStore.value)
+const timer = computed(() => loaderStore.timer)
+</script>
+
+<template>
+  <div
+    class="fixed z-1 top-0 left-0 w-screen h-screen bg-(--bit-black) justify-center items-center transition-opacity ease-in duration-500"
+    :class="{
+      'opacity-100': loader,
+      'opacity-0': !loader,
+      flex: timer,
+      hidden: !timer,
+    }"
+  >
+    <div class="loader h-fit"></div>
+    <div class="sr-only">Loading...</div>
+  </div>
+</template>
+
+<style lang="css">
+.loader {
+  display: inline-grid;
+  font-size: 30px;
+}
+.loader:before,
+.loader:after {
+  content: 'Loading...';
+  grid-area: 1/1;
+  -webkit-mask-size:
+    100% 5px,
+    100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: l35-1 1s infinite;
+}
+.loader:before {
+  -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+}
+.loader:after {
+  -webkit-mask-image: linear-gradient(#000 0 0);
+  animation:
+    l35-1 1s infinite,
+    l35-2 0.2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+
+@keyframes l35-1 {
+  0% {
+    -webkit-mask-position:
+      0 20px,
+      0 0;
+  }
+  20% {
+    -webkit-mask-position:
+      0 8px,
+      0 0;
+  }
+  40% {
+    -webkit-mask-position:
+      0 100%,
+      0 0;
+  }
+  60% {
+    -webkit-mask-position:
+      0 3px,
+      0 0;
+  }
+  80% {
+    -webkit-mask-position:
+      0 15px,
+      0 0;
+  }
+  100% {
+    -webkit-mask-position:
+      0 0,
+      0 0;
+  }
+}
+@keyframes l35-2 {
+  100% {
+    transform: translate(0.1px);
+  }
+}
+</style>

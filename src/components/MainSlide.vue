@@ -11,9 +11,9 @@ defineProps({
 })
 
 const gotoAbout = () => {
-  const target = document.querySelector("a[href='#about_me']")
+  const target = document.querySelector('#about_me')
   window.scrollTo({
-    top: target.offsetTop,
+    top: target.offsetTop - 78,
   })
 }
 </script>

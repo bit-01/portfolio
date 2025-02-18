@@ -5,8 +5,12 @@ import PageSection from '@/components/PageSection.vue'
 import { settingsStore } from '@/stores/settings'
 import { computed, onMounted } from 'vue'
 import { mdiOpenInNew } from '@mdi/js'
+import { useLoaderStore } from '@/stores/loader'
+import PageLoader from '@/components/PageLoader.vue'
 
 const settStore = settingsStore()
+const loaderStore = useLoaderStore()
+
 const homepage = computed(() => {
   return settStore.getMainSettings.settings
 })
@@ -16,12 +20,18 @@ const cats = computed(() => {
 const projects = computed(() => {
   return settStore.getMainSettings.projects
 })
+
 onMounted(() => {
-  settStore.fetchMainSettings()
+  loaderStore.start()
+
+  settStore.fetchMainSettings().then(() => {
+    loaderStore.stop()
+  })
 })
 </script>
 
 <template>
+  <PageLoader />
   <MainSlide :homepage="homepage">
     <template #background>
       <MainParticlesSlide />
@@ -50,7 +60,7 @@ onMounted(() => {
   <PageSection
     title="skills"
     content-class="grid grid-cols-1 sm:grid-cols-3 justify-between gap-y-15 "
-    div-id="skills"
+    id="skills"
   >
     <template #content>
       <div
@@ -78,6 +88,7 @@ onMounted(() => {
   </PageSection>
 
   <PageSection
+    id="projects"
     title="projects"
     content-class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 p-2 sm:p-6"
   >
@@ -85,7 +96,7 @@ onMounted(() => {
       <template v-for="(project, i) in projects" :key="i">
         <div class="w-full h-full aspect-square">
           <figure
-            class="group text-center flex gap-2 flex-col w-full h-full transition-all hover:scale-110 hover:bg-(--bit-purple) rounded-lg"
+            class="group text-center flex gap-2 flex-col w-full h-full transition-all duration-700 hover:scale-110 hover:bg-(--bit-purple) rounded-lg"
           >
             <img
               class="object-cover w-max-[500px] h-10/12 w-full rounded-lg group-hover:rounded-b-none"
@@ -111,7 +122,7 @@ onMounted(() => {
                 </span>
               </a>
               <span v-else></span>
-              <RouterLink :to="'#'">more information</RouterLink>
+              <!-- <RouterLink :to="'#'">more information</RouterLink> -->
             </div>
           </figure>
         </div>

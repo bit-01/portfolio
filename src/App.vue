@@ -17,7 +17,13 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', updateScrollY)
 })
+const gotoSection = (hashTag) => {
+  const dest = hashTag === 0 ? 0 : document.querySelector('#' + hashTag).offsetTop - 78
 
+  window.scrollTo({
+    top: dest,
+  })
+}
 watch(scrollY, (nval) => {
   scroll.value = nval > 0
 })
@@ -47,7 +53,7 @@ watch(scrollY, (nval) => {
       </template>
       <template #content>
         <nav class="flex flex-col text-start justify-center items-start text-2xl gap-6">
-          <RouterLink
+          <!-- <RouterLink
             class="w-full nav-item"
             activeClass="active"
             exactActiveClass="active"
@@ -59,9 +65,9 @@ watch(scrollY, (nval) => {
             class="w-full nav-item"
             activeClass="active"
             exactActiveClass="active"
-            :to="{ name: 'home2' }"
+            :to="{ name: 'home' }"
           >
-            Home 2
+            About Me
           </RouterLink>
           <RouterLink
             class="w-full nav-item"
@@ -69,8 +75,29 @@ watch(scrollY, (nval) => {
             exactActiveClass="active"
             :to="{ name: 'home3' }"
           >
-            Home 3
+            Skills
           </RouterLink>
+          <RouterLink
+            class="w-full nav-item"
+            activeClass="active"
+            exactActiveClass="active"
+            :to="{ name: 'home3' }"
+          >
+            Projects
+          </RouterLink> -->
+          <a class="w-full nav-item" @click.prevent="gotoSection(0)" href="#about_me"> Home </a>
+          <a class="w-full nav-item" @click.prevent="gotoSection('about_me')" href="#about_me">
+            About Me
+          </a>
+          <a class="w-full nav-item" @click.prevent="gotoSection('skills')" href="#skills">
+            Skills
+          </a>
+          <a class="w-full nav-item" @click.prevent="gotoSection('projects')" href="#projects">
+            Projects
+          </a>
+          <a class="w-full nav-item" @click.prevent="gotoSection('contact')" href="#contact">
+            contact me
+          </a>
         </nav>
       </template>
     </SideBar>
