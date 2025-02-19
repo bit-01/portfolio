@@ -1,14 +1,14 @@
 export default {
   particles: {
     number: {
-      value: 200,
+      value: 400,
       density: {
         enable: true,
-        value_area: 7000,
+        value_area: 3000,
       },
     },
     color: {
-      value: '#ffffff',
+      value: '#999',
     },
     shape: {
       type: 'circle',
@@ -36,7 +36,7 @@ export default {
       },
     },
     size: {
-      value: 15,
+      value: 3,
       random: true,
       anim: {
         enable: false,
@@ -48,7 +48,7 @@ export default {
     line_linked: {
       enable: true,
       distance: 200,
-      color: '#ffffff',
+      color: '#888',
       opacity: 0.4,
       width: 1,
     },

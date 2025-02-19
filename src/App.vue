@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import { mdiMenu } from '@mdi/js'
 import SideBar from '@/components/SideBar.vue'
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
@@ -94,6 +94,13 @@ watch(scrollY, (nval) => {
           </a>
           <a class="w-full nav-item" @click.prevent="gotoSection('projects')" href="#projects">
             Projects
+          </a>
+          <a
+            class="w-full nav-item"
+            @click.prevent="gotoSection('certification')"
+            href="#certification"
+          >
+            certification
           </a>
           <a class="w-full nav-item" @click.prevent="gotoSection('contact')" href="#contact">
             contact me
