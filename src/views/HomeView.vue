@@ -118,9 +118,7 @@ onMounted(() => {
             <figcaption class="capitalize">
               {{ project.name }}
             </figcaption>
-            <div
-              class="hidden group-hover:flex p-2 justify-between items-center capitalize underline"
-            >
+            <div class="flex p-2 justify-between items-center capitalize underline">
               <a v-if="project.url" :href="project.url" target="_blank">
                 <span class="flex">
                   Visit Website <sup><SvgIcon type="mdi" :path="mdiOpenInNew" class="w-3" /></sup>

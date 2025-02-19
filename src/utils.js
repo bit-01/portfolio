@@ -25,3 +25,13 @@ export function formatTime(t, locale = 'en') {
 export function generateId() {
   return Math.random().toString(16).slice(2)
 }
+
+export function formatPhoneNumber(phoneNumberString) {
+  var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
+  var match = cleaned.match(/^(\+963|)?(\d{3})(\d{3})(\d{4})$/)
+  if (match) {
+    var intlCode = match[1] ? '+963 ' : ''
+    return [intlCode, ' ', match[2], ' ', match[3], ' ', match[4]].join('')
+  }
+  return null
+}
