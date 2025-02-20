@@ -25,6 +25,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     letter-spacing: 10%;
+    overflow-x: hidden;
 }
 
 #app {

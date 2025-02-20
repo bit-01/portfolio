@@ -134,7 +134,8 @@ watch(scrollY, (nval) => {
             <template v-for="(social, i) in sharedData?.contact?.urls" :key="i">
               <a
                 v-if="social.value"
-                href=""
+                :href="social.value"
+                target="_blank"
                 class="fill-(--bit-gray) hover:fill-(--bit-purple) w-10 transition-all duration-300"
                 v-html="social.options?.icon?.svg"
               ></a>
@@ -166,7 +167,8 @@ watch(scrollY, (nval) => {
         <template v-for="(social, i) in sharedData?.contact?.urls" :key="i">
           <a
             v-if="social.value"
-            href=""
+            :href="social.value"
+            target="_blank"
             class="fill-(--bit-gray) hover:fill-(--bit-purple) w-10 transition-all duration-300"
             v-html="social.options?.icon?.svg"
           ></a>

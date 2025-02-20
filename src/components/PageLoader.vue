@@ -25,66 +25,37 @@ const timer = computed(() => loaderStore.timer)
 
 <style lang="css">
 .loader {
-  display: inline-grid;
-  font-size: 30px;
-}
-.loader:before,
-.loader:after {
-  content: 'Loading...';
-  grid-area: 1/1;
-  -webkit-mask-size:
-    100% 5px,
-    100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: l35-1 1s infinite;
-}
-.loader:before {
-  -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-}
-.loader:after {
-  -webkit-mask-image: linear-gradient(#000 0 0);
-  animation:
-    l35-1 1s infinite,
-    l35-2 0.2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #5c5cff;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-@keyframes l35-1 {
-  0% {
-    -webkit-mask-position:
-      0 20px,
-      0 0;
-  }
-  20% {
-    -webkit-mask-position:
-      0 8px,
-      0 0;
-  }
-  40% {
-    -webkit-mask-position:
-      0 100%,
-      0 0;
-  }
-  60% {
-    -webkit-mask-position:
-      0 3px,
-      0 0;
-  }
-  80% {
-    -webkit-mask-position:
-      0 15px,
-      0 0;
-  }
-  100% {
-    -webkit-mask-position:
-      0 0,
-      0 0;
-  }
+.loader::before {
+  content: '';
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 3s ease-in-out infinite;
 }
-@keyframes l35-2 {
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
   100% {
-    transform: translate(0.1px);
+    width: 0;
+    right: 0;
+    left: unset;
   }
 }
 </style>
