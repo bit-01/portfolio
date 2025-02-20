@@ -1,0 +1,1 @@
+import{g as s,f as t,h as o,b as a}from"./index-SSA2PKfU.js";const n={},r={class:"about"};function c(i,e){return a(),t("div",r,e[0]||(e[0]=[o("h1",null,"This is an about page",-1)]))}const f=s(n,[["render",c]]);export{f as default};
