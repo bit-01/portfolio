@@ -4,6 +4,7 @@ import particles from '@/particles'
 import { loadScript, unloadScript } from 'vue-plugin-load-script'
 
 onMounted(() => {
+  console.log(import.meta.env.VITE_ENV)
   if (import.meta.env.VITE_ENV === 'local') {
     loadScript('/libs/particles.js/particles.js').then(() => {
       window.particlesJS('particles-js', particles)

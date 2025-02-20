@@ -1,1 +1,0 @@
-import{s as a,c as s,o,a as n,w as r,M as c,b as i,d as u,_}from"./index-rd_Q_SDU.js";const h={__name:"Home2View",setup(m){const e=a(),t=s(()=>e.getMainSettings.settings);return o(()=>{e.fetchMainSettings()}),(p,g)=>(i(),n(c,{homepage:t.value,blur:!0,shadow:!0},{background:r(()=>[u(_)]),_:1},8,["homepage"]))}};export{h as default};
