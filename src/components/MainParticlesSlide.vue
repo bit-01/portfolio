@@ -4,12 +4,22 @@ import particles from '@/particles'
 import { loadScript, unloadScript } from 'vue-plugin-load-script'
 
 onMounted(() => {
-  loadScript('/libs/particles.js/particles.js').then(() => {
-    window.particlesJS('particles-js', particles)
-  })
+  if (import.meta.env.VITE_ENV === 'local') {
+    loadScript('/libs/particles.js/particles.js').then(() => {
+      window.particlesJS('particles-js', particles)
+    })
+  } else {
+    loadScript('/portfolio/libs/particles.js/particles.js').then(() => {
+      window.particlesJS('particles-js', particles)
+    })
+  }
 })
 onUnmounted(() => {
-  unloadScript('/libs/particles.js/particles.js')
+  if (import.meta.env.VITE_ENV === 'local') {
+    unloadScript('/libs/particles.js/particles.js')
+  } else {
+    unloadScript('/portfolio/libs/particles.js/particles.js')
+  }
 })
 </script>
 
