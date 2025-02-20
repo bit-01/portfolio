@@ -24,8 +24,7 @@ export const settingsStore = defineStore('settings', {
         const data = await axi.get(paths.settings.shared)
         this.shared = data.data
       } catch (error) {
-        alert('Error !')
-        console.error(error)
+        console.log(error)
       }
     },
     async fetchMainSettings() {
@@ -33,8 +32,7 @@ export const settingsStore = defineStore('settings', {
         const data = await axi.get(paths.settings.homepage)
         this.main = data.data
       } catch (error) {
-        alert('Error !')
-        console.error(error)
+        console.log(error)
       }
     },
   },

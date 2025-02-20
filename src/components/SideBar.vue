@@ -43,7 +43,7 @@ const sideBarId = computed(() => {
   <!-- drawer component -->
   <div
     :id="sideBarId"
-    class="fixed top-0 left-0 z-40 w-full md:w-1/3 h-screen p-4 overflow-y-auto transition-transform bg-transparent backdrop-blur-xs"
+    class="fixed top-0 left-0 z-40 w-full md:w-1/3 h-screen p-4 overflow-y-auto transition-transform bg-transparent backdrop-blur-lg"
     :class="{
       '-translate-x-full': !value,
     }"

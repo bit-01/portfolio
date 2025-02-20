@@ -9,21 +9,22 @@ import { useLoaderStore } from '@/stores/loader'
 import PageLoader from '@/components/PageLoader.vue'
 import { formatDate } from '@/utils'
 import CertAccordion from '@/components/CertAccordion.vue'
+import homepageData from '@/stores/data/homepage'
 
 const settStore = settingsStore()
 const loaderStore = useLoaderStore()
 
 const homepage = computed(() => {
-  return settStore.getMainSettings.settings
+  return settStore.getMainSettings.settings ?? homepageData.settings
 })
 const cats = computed(() => {
-  return settStore.getMainSettings.categories
+  return settStore.getMainSettings.categories ?? homepageData.categories
 })
-const projects = computed(() => {
-  return settStore.getMainSettings.projects
+const projs = computed(() => {
+  return settStore.getMainSettings.projects ?? homepageData.projects
 })
-const certifications = computed(() => {
-  return settStore.getMainSettings.certificates
+const certs = computed(() => {
+  return settStore.getMainSettings.certificates ?? homepageData.certificates
 })
 
 onMounted(() => {
@@ -98,7 +99,7 @@ onMounted(() => {
     content-class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-15 p-2 sm:p-6"
   >
     <template #content>
-      <template v-for="(project, i) in projects" :key="i">
+      <template v-for="(project, i) in projs" :key="i">
         <div class="w-full h-full aspect-square">
           <figure
             class="group text-center flex gap-2 flex-col w-full h-full transition-all duration-700 hover:scale-110 hover:bg-(--bit-purple) rounded-lg"
@@ -141,7 +142,7 @@ onMounted(() => {
     <template #content>
       <CertAccordion
         :cert="cert"
-        v-for="(cert, i) in certifications"
+        v-for="(cert, i) in certs"
         :key="i"
         class="border-b [border-image:linear-gradient(90deg,#5c5cff_10%,transparent_60%)_1]"
       >

@@ -4,6 +4,7 @@ import { mdiMenu } from '@mdi/js'
 import SideBar from '@/components/SideBar.vue'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { settingsStore } from './stores/settings'
+import shared from './stores/data/shared'
 
 const sideBar = ref(false)
 const scroll = ref(false)
@@ -13,7 +14,7 @@ const settStore = settingsStore()
 const updateScrollY = () => {
   scrollY.value = window.scrollY
 }
-const sharedData = computed(() => settStore.getSharedSettings)
+const contacts = computed(() => settStore.getSharedSettings.contact ?? shared.contact)
 
 onMounted(() => {
   window.addEventListener('scroll', updateScrollY)
@@ -131,7 +132,7 @@ watch(scrollY, (nval) => {
         </nav>
         <div class="border-t border-stone-500 p-3 mt-4">
           <address class="flex justify-start gap-6">
-            <template v-for="(social, i) in sharedData?.contact?.urls" :key="i">
+            <template v-for="(social, i) in contacts?.urls" :key="i">
               <a
                 v-if="social.value"
                 :href="social.value"
@@ -142,7 +143,7 @@ watch(scrollY, (nval) => {
             </template>
           </address>
           <address class="flex flex-col justify-center gap-3 mt-3">
-            <template v-for="(phone, i) in sharedData?.contact?.phone" :key="i">
+            <template v-for="(phone, i) in contacts?.phone" :key="i">
               <span v-if="phone.value">
                 {{ phone.value }}
               </span>
@@ -164,7 +165,7 @@ watch(scrollY, (nval) => {
         – I’d love to hear about your project or role!
       </p>
       <address class="flex justify-center gap-6">
-        <template v-for="(social, i) in sharedData?.contact?.urls" :key="i">
+        <template v-for="(social, i) in contacts?.urls" :key="i">
           <a
             v-if="social.value"
             :href="social.value"
@@ -175,7 +176,7 @@ watch(scrollY, (nval) => {
         </template>
       </address>
       <address class="flex flex-wrap justify-center gap-6">
-        <template v-for="(phone, i) in sharedData?.contact?.phone" :key="i">
+        <template v-for="(phone, i) in contacts?.phone" :key="i">
           <span v-if="phone.value">
             {{ phone.value }}
           </span>
